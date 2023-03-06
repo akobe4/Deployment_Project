@@ -3,25 +3,26 @@
 ### [Assignment](assignment.md)
 
 ## Project/Goals
-(fill in your description and goals here)
+The goal of the project was to predict loan eligibilty based on customer details.  
 
 ## Hypothesis
-(fill in your hypothesis about which subset of applicants will be most likely to have their loan approved, and why. Give some examples of how you will test this hypothesis)
+Without having much understanding of loan eligibility, I would thinj that income might have an effect on whether or not someone would be able to repay a loan and therefore be approved for a loan. 
 
 ## EDA 
-(fill in what you discovered in your exploration of the dataset)
+7 columns had missing values. Most categorical variables had 2 options execpt dependents and property area. Applicant income has a right skew - which is also seen when you break it into graduates and non-graduates. Loan amount has a bit more of a normal distribution with some outliers. 
 
 
 ## Process
 (fill in what you did during EDA, cleaning, feature engineering, modeling, deployment, testing)
-### (your step 1)
-### (your step 2)
+    1. In the pipeline numerical features NaN's were replaced with a     mean and scaled using standard scaler. The categorical features NaN's were replaced with the mode, and one-hot-encoded. 
+    2. The pipeline included logistic regression and SVC and select K-best with 3-7 features. 
+    3. pickle was used to save the model and the the model columns  
 
 ## Results/Demo
-(fill in your model's performance, details about the API you created, and (optional) a link to an live demo)
+The final model had a test accuracy of 0.813, which was achieved using Logistic Regression and 3 features. 
 
 ## Challanges 
-(discuss challenges you faced in the project)
+I wasn't able to get the deployment part of the assignment working. 
 
 ## Future Goals
-(what would you do if you had more time? are there any potential issues/biases with your model/use case?)
+In the future I would like to look more into features and if there were other ways to engineer this information. I would also try different types of models. 
